@@ -2,7 +2,7 @@
 
 Modular, multi-file **LaTeX template** for the Cooperative Education Report at the **Department of Computer Engineering, Faculty of Engineering, Kasetsart University**.
 
-This template adheres strictly to the official document formatting guidelines specified in `reference.pdf` and uses the official **TH Sarabun New** font (from the KU Registrar).
+This template adheres strictly to the official document formatting guidelines specified in [`FORMATTING_GUIDELINES.md`](./FORMATTING_GUIDELINES.md) (synthesized from the university reference guide) and uses the official **TH Sarabun New** font (from the KU Registrar).
 
 ---
 
@@ -16,8 +16,9 @@ ske-coop-report-template/
 ├── Makefile                  # Build & live preview targets
 ├── .latexmkrc                # latexmk configuration for XeLaTeX
 ├── README.md                 # Project documentation
+├── FORMATTING_GUIDELINES.md  # Official report formatting & content advisories
+├── CONTRIBUTION.md           # Contribution guidelines
 ├── .gitignore                # Git ignore rules for LaTeX auxiliary files
-├── reference.pdf             # Official formatting reference template
 ├── fonts/                    # TH Sarabun New TrueType font files
 │   ├── THSarabunNew.ttf
 │   ├── THSarabunNew-Bold.ttf
