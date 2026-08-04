@@ -1,0 +1,53 @@
+# ==============================================================================
+# LaTeX Auxiliary & Build Files
+# ==============================================================================
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.fmt
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.lof
+*.log
+*.lot
+*.maf
+*.mtc
+*.mtc0
+*.nav
+*.nlo
+*.nls
+*.out
+*.pdfsync
+*.run.xml
+*.snm
+*.synctex.gz
+*.synctex(busy)
+*.toc
+*.vrb
+*.xdv
+
+# TeX Live / XeTeX / LuaTeX generated files
+xelatex.fmt
+pdflatex.fmt
+lualatex.fmt
+
+# Build Output (Optional: uncomment if you don't want to track generated PDF)
+# main.pdf
+
+# ==============================================================================
+# OS & Editor Files
+# ==============================================================================
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/

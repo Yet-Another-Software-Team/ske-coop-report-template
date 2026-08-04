@@ -1,0 +1,34 @@
+\documentclass[12pt, a4paper]{report}
+
+% Load custom setup package and configuration variables
+\usepackage{setup}
+\input{config}
+
+\begin{document}
+
+% ------------------------------------------------------------------------------
+% Front Matter
+% ------------------------------------------------------------------------------
+\input{sections/00_cover}
+\input{sections/00_abstract}
+\input{sections/00_acknowledgement}
+\input{sections/00_contents}
+
+% ------------------------------------------------------------------------------
+% Main Body Chapters
+% ------------------------------------------------------------------------------
+\input{sections/01_introduction}
+\input{sections/02_background}
+\input{sections/03_methodology}
+\input{sections/04_results}
+\input{sections/05_conclusion}
+\input{sections/06_problems}
+
+% ------------------------------------------------------------------------------
+% Back Matter
+% ------------------------------------------------------------------------------
+\input{sections/07_references}
+\input{sections/08_appendix_a}
+\input{sections/09_appendix_b}
+
+\end{document}
