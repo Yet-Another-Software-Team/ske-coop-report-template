@@ -39,8 +39,8 @@ xelatex.fmt
 pdflatex.fmt
 lualatex.fmt
 
-# Build Output (Optional: uncomment if you don't want to track generated PDF)
-# main.pdf
+# Build Output & PDF files
+*.pdf
 
 # ==============================================================================
 # OS & Editor Files
