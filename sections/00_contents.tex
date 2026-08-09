@@ -14,7 +14,9 @@
 \hfill \textbf{Page}
 \vspace{-0.5em}
 
-\tableofcontents
+\makeatletter
+\@starttoc{toc}
+\makeatother
 
 % Page 5: List of Figures
 \newpage
@@ -28,7 +30,9 @@
 \hfill \textbf{Page}
 \vspace{-0.5em}
 
-\listoffigures
+\makeatletter
+\@starttoc{lof}
+\makeatother
 
 % Page 6: List of Tables
 \newpage
@@ -42,4 +46,6 @@
 \hfill \textbf{Page}
 \vspace{-0.5em}
 
-\listoftables
+\makeatletter
+\@starttoc{lot}
+\makeatother
