@@ -21,9 +21,6 @@
 \RequirePackage{indentfirst}
 \RequirePackage{etoolbox}
 
-% Citation management (numeric, sorted, compressed [1-3])
-\RequirePackage{cite}
-
 % Allow URLs to break properly across lines on A4 pages
 \RequirePackage{xurl}
 
@@ -34,6 +31,10 @@
   hypertexnames=false
 ]{hyperref}
 \urlstyle{same}
+
+% Citation management (numeric, sorted, compressed [1-3])
+% Load after hyperref so \cite formatting/compression stays active.
+\RequirePackage{cite}
 
 % Font Configuration: TH Sarabun New TTF files in ./fonts/
 \setmainfont[
