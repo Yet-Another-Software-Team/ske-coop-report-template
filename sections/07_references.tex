@@ -1,14 +1,19 @@
 % ==============================================================================
 % References
+% ==============================================================================
+% Manage citations using BibTeX entries defined in references.bib.
+% Use \cite{key} in your chapters to cite references (e.g., \cite{baeza1999modern}).
+%
 % Citation formatting rules per Kasetsart University Cooperative Education Guide:
 % - Books: Author, Title, Edition, Publisher, Location, Year.
 % - Proceedings: Author, "Title", In Conference Name, Pages, Year.
 % - Journals: Author, "Title", Journal Name, Vol, No, Pages, Year.
 % - Web: Author, Title, Year. Source: URL [Accessed date].
+%
+% TIP: To include all entries in references.bib without explicitly citing them,
+% uncomment the line below:
+% \nocite{*}
 % ==============================================================================
-\chapter*{References}
-\addcontentsline{toc}{chapter}{References}
 
-\begin{enumerate}[label={[\arabic*]}]
-    \item \guide{Add your reference entry here (e.g., Author, Title, Publisher/Journal/URL, Year). Refer to FORMATTING\_GUIDELINES.md for formatting rules.}
-\end{enumerate}
+\bibliographystyle{ieeetr}
+\bibliography{references}

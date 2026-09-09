@@ -1,121 +1,174 @@
-# SKE Cooperative Education Report Formatting & Structure Guidelines
+# Kasetsart University SKE Cooperative Education Report Formatting Guidelines
 
-This document synthesizes all official formatting specifications, typography rules, layout parameters, and structural advisories from the Kasetsart University Cooperative Education Report guidelines (`reference.pdf`).
-
----
-
-## 📏 Page Layout & Typography Specifications
-
-- **Paper Size**: Standard A4 paper.
-- **Margins**: **1.0 inch (2.54 cm)** on all four sides (Top, Bottom, Left, Right).
-- **Orientation**: Portrait (vertical printing). Images, architecture diagrams, or wide tables may use Landscape (horizontal) orientation as needed.
-- **Primary Font**: **TH Sarabun New** (TTF font provided in [`fonts/`](./fonts/)).
-- **Font Sizes & Weights**:
-  - **Cover Document Header**: 22 pt Bold
-  - **Cover Title / Abstract / Chapter Headers**: 20 pt Bold
-  - **Section Headers (1.1, 1.2, etc.)**: 18 pt Bold
-  - **Subsection Headers & Body Text**: 16 pt Regular
-- **Page Numbering**:
-  - **Front Matter** (*Abstract, Acknowledgement, Contents, List of Figures, List of Tables*): Enclosed in parentheses `(1)`, `(2)`, `(3)`, ... positioned at top-right.
-  - **Main Body & Appendices** (*Chapters 1–6, References, Appendices A–B*): Standard numbers `1`, `2`, `3`, ... positioned at top-right.
+Comprehensive guide synthesized from official Kasetsart University Cooperative Education guidelines for engineering students.
 
 ---
 
-## 📑 Required Chapter Structure & Content Guidelines
+## 📐 Page Setup & Margins
 
-### 0. Front Matter
+| Property             | Value                | Notes                                 |
+| :------------------- | :------------------- | :------------------------------------ |
+| **Paper Size**       | A4 (210 mm × 297 mm) | Standard portrait orientation         |
+| **Top Margin**       | 1.0 inch (2.54 cm)   |                                       |
+| **Bottom Margin**    | 1.0 inch (2.54 cm)   |                                       |
+| **Left Margin**      | 1.0 inch (2.54 cm)   | Standard thesis/coop binding margin   |
+| **Right Margin**     | 1.0 inch (2.54 cm)   |                                       |
+| **Paragraph Indent** | 1.5 cm               | First line of each paragraph          |
+| **Line Spacing**     | 1.15                 | Optimal Thai/Latin script readability |
+
+---
+
+## 🔤 Font Hierarchy (TH Sarabun New)
+
+| Element                  | Size (pt) | Style            | Alignment                |
+| :----------------------- | :-------- | :--------------- | :----------------------- |
+| **Document Title**       | 22 pt     | Bold             | Centered                 |
+| **Chapter Header**       | 20 pt     | Bold             | Centered                 |
+| **Section Header**       | 18 pt     | Bold             | Left-aligned             |
+| **Subsection Header**    | 16 pt     | Bold             | Left-aligned             |
+| **Body Text**            | 16 pt     | Regular          | Justified / Left-aligned |
+| **Captions / Footnotes** | 14–16 pt  | Regular / Italic | Centered                 |
+
+---
+
+## 📄 Front Matter & Page Numbering Rules
 
 1. **Cover Page (`00_cover.tex`)**:
-   - Header: *Cooperative Education Report* (22 pt bold)
-   - Report Title (20 pt bold)
-   - Company name & location, Student Full Name, Student ID, Academic Year, Department of Computer Engineering, Faculty of Engineering, Kasetsart University.
+   - Must contain: Faculty Logo, Report Title (Thai/English), Student Name & ID, Department/Faculty, Academic Semester/Year.
+   - **No page number printed**.
 2. **Abstract (`00_abstract.tex`)**:
-   - Title: **Abstract** (20 pt bold, page number `(1)`).
-   - Concise executive summary of the internship objectives, methodology, key outcomes, and project impact (16 pt body text).
+   - Numbered with parenthesized Arabic numerals: **`(1)`** at top-right.
 3. **Acknowledgement (`00_acknowledgement.tex`)**:
-   - Title: **Acknowledgement** (page number `(2)`).
-   - Expressions of gratitude to supervisor, company team members, department faculty, and supporting mentors.
-   - Includes student signature line and final co-op date (`DD / MM / YYYY`).
+   - Continues parenthesized numbering: **`(2)`** at top-right.
 4. **Table of Contents & Lists (`00_contents.tex`)**:
-   - Table of Contents `(3)`
-   - List of Figures `(4)`
-   - List of Tables `(5)`
+   - Numbered sequentially: **`(3)`**, **`(4)`**, etc.
+5. **Main Body Chapters (Chapters 1–6, References, Appendices)**:
+   - Starts at Chapter 1 with normal Arabic numerals: **`1`**, **`2`**, **`3`**, etc., at top-right.
 
 ---
 
-### 1. Main Body Chapters
+## 📝 Required Chapter Outlines & Content Expectations
 
-#### Chapter 1: Introduction (`01_introduction.tex`)
-- **1.1 Motivations and Importance**: Background and significance of the problem/project.
-- **1.2 Objectives**: Numbered list of specific goals to achieve during the coop period.
-- **1.3 Scope of Work**: System boundaries, target deliverables, technologies used, and constraints.
-- **1.4 History and Detail of Company**:
-  - Company name, location, and overview.
-  - Company profile, core products, or primary technical services.
-  - Organizational chart and management structure.
-  - Specific position and technical role assigned to the student.
-  - Supervisor’s full name and position.
-  - Duration of the internship/cooperative education period.
-- **1.5 Expected Benefits**: Anticipated deliverables and value added for the student, company, and university.
+### Chapter 1: Introduction (`01_introduction.tex`)
 
-#### Chapter 2: Background Knowledge and Related Work (`02_background.tex`)
-- **2.1 Background Knowledge**: Essential technical domain knowledge, frameworks, algorithms, and key concepts required for the project.
-- **2.2 Related Work**: Previous internal company projects, academic literature, or existing industry solutions related to your work.
+- **Motivations and Importance**: Background problem, why the internship/project is necessary.
+- **Objectives**: Clear, bulleted project or internship goals.
+- **Scope of Work**: Boundaries of responsibilities, technologies, and deliverables.
+- **History and Detail of Company**: Company background, organizational chart, supervisor info.
+- **Expected Benefits**: Anticipated deliverables for student, workplace, and university.
 
-#### Chapter 3: Methodology (`03_methodology.tex`)
-- **3.1 System Architecture & Design**: High-level and detailed architecture diagrams, database schemas, API specs, or design patterns used.
-- **Tools & Technologies**: Software tools, hardware, frameworks, and devops pipeline employed.
-- **Implementation Procedures**: Step-by-step development process, algorithms, workflows, and implementation details.
+### Chapter 2: Background Knowledge and Related Work (`02_background.tex`)
 
-#### Chapter 4: Results and Analysis (`04_results.tex`)
-- **4.1 Results**: Presentation of outputs, user interface screenshots, benchmark plots, performance metrics, or experimental data.
-- **4.2 Analysis**: Detailed discussion, interpretation, evaluation of results against project objectives, and technical trade-offs.
+- **Background Knowledge**: Theoretical foundation, frameworks, SDKs, and platforms required.
+- **Related Work**: Existing industry or academic solutions and comparison against current work.
 
-#### Chapter 5: Conclusion (`05_conclusion.tex`)
-- **Summary of Work**: Summary of completed deliverables vs initial goals.
-- **Expectations**: Reflection on achievements relative to initial expectations.
-- **Benefits Breakdown**:
-  - Benefits to **yourself** (technical skills, soft skills, professional domain experience).
-  - Benefits to the **company** (implemented features, tooling, optimized processes).
-  - Benefits to the **university** (academic-industry link, feedback for curriculum).
-- **Personal SWOT Analysis**: Evaluation of your own Strengths, Weaknesses, Opportunities, and Threats during the internship.
-- **Impressive & Special Experiences**: Notable challenges overcome, memorable milestones, or workplace culture insights.
+### Chapter 3: Methodology (`03_methodology.tex`)
 
-#### Chapter 6: Problems and Comments (`06_problems.tex`)
+- **System Development and Execution**: Architecture diagrams, workflows, sprint cycles, implementation steps, and technical approaches.
+
+### Chapter 4: Results and Analysis (`04_results.tex`)
+
+- **Results**: Delivered features, system screenshots, benchmarks, or performance evaluation.
+- **Analysis**: Technical evaluation, trade-offs, metrics discussion, and goal achievement verification.
+
+### Chapter 5: Conclusion (`05_conclusion.tex`)
+
+- **Summary of Work**: High-level synthesis of completed tasks and contributions.
+- **Expectations vs. Actual Outcomes**: Evaluation of initial objectives against final state.
+- **Benefits**: Value delivered to the host company and skills acquired by the student.
+- **SWOT Analysis of Yourself**: Personal Strengths, Weaknesses, Opportunities, and Threats analysis reflecting on the internship experience.
+- **Special / Impressive Experiences**: Memorable professional or team experiences.
+
+### Chapter 6: Problems and Comments (`06_problems.tex`)
+
 Categorized reflection on challenges encountered and suggestions for improvement across three perspectives:
+
 1. **Student Perspective**: Personal difficulties faced (technical, communication, time management) and lessons learned.
 2. **Company Perspective**: Observations regarding workplace onboarding, supervisor guidance, infrastructure, or task assignment.
 3. **University Perspective**: Feedback regarding course preparation, coop coordination, prerequisite knowledge, or administrative processes.
 
 ---
 
-## 📚 Citation & Reference Guidelines (`07_references.tex`)
+## 📚 Citation & Reference Guidelines (`07_references.tex` & `references.bib`)
+
+The template manages citations using **BibTeX** (`references.bib`) with the `ieeetr` bibliography style (bracketed numeric citations sorted by appearance in the text):
 
 ### In-Text Citation Rules
-- Cite references within document text using bracketed numbers, e.g., `[1]` or `[1, 2]`.
-- Numbers must match the corresponding entry in the References list sequentially.
 
-### Reference List Formatting Rules by Source Type
+- Cite references within document text using the `\cite{key}` command, e.g., `\cite{baeza1999modern}` or multiple keys `\cite{baeza1999modern, brin1998anatomy}`.
+- In-text citations render as bracketed numbers matching the reference list order: `[1]` or `[1, 2]`.
+- The `cite` package compresses and sorts ranges automatically (e.g. `[1-3]`).
+
+### BibTeX Entry Formatting by Source Type
 
 1. **Books**:
-   - **Format**: `Author, Title, Edition (if applicable), Publisher, Location, Year.`
-   - **Thai Example**: อุดมศักดิ์ สินธิพงษ์, *กฎหมายเกี่ยวกับสิ่งแวดล้อม*, พิมพ์ครั้งที่ 2, สำนักพิมพ์วิญญูชน, กรุงเทพฯ, 2549.
-   - **English Example**: R.A. Baeza-Yates and B.A. Ribeiro-Neto, *Modern Information Retrieval*, ACM Press & Addison Wesley, New York, 1999.
+   - **Fields**: `author`, `title`, `edition` (optional), `publisher`, `address`, `year`.
+   - **BibTeX Example**:
+     ```bibtex
+     @book{baeza1999modern,
+       author    = {R. A. Baeza-Yates and B. A. Ribeiro-Neto},
+       title     = {Modern Information Retrieval},
+       publisher = {ACM Press \& Addison Wesley},
+       address   = {New York},
+       year      = {1999}
+     }
+     ```
+   - **Thai Example**:
+     ```bibtex
+     @book{sinthipong2006law,
+       author    = {{อุดมศักดิ์ สินธิพงษ์}},
+       title     = {กฎหมายเกี่ยวกับสิ่งแวดล้อม},
+       edition   = {2},
+       publisher = {สำนักพิมพ์วิญญูชน},
+       address   = {กรุงเทพฯ},
+       year      = {2549}
+     }
+     ```
 
 2. **Conference Proceedings**:
-   - **Format**: `Author, "Title", In Proceedings/Conference Name, Pages, Year.`
-   - **Thai Example**: สิริยาภรณ์ ไกรมาก, ปรารถนา ปรารถนาดี และ จิรชัย พุทธกุลสมศิริ, "การพัฒนาแบบจำลองการทำนายคุณภาพของผลิตภัณฑ์กาแฟคั่วบด", ใน *รายงานการประชุมทางวิชาการของมหาวิทยาลัยเกษตรศาสตร์ ครั้งที่ 47*, น. 125-132, 2552.
-   - **English Example**: R.A. Baeza-Yates, F. Saint-Jean, and C. Castillo, "Web Structure, Dynamics and Page Quality", In *Proceedings of the 9th International Symposium on String Processing and Information Retrieval*, pp. 117-130, 2002.
+   - **Fields**: `author`, `title`, `booktitle`, `pages`, `year`.
+   - **BibTeX Example**:
+     ```bibtex
+     @inproceedings{baeza2002web,
+       author    = {R. A. Baeza-Yates and F. Saint-Jean and C. Castillo},
+       title     = {Web Structure, Dynamics and Page Quality},
+       booktitle = {Proceedings of the 9th International Symposium on String Processing and Information Retrieval},
+       pages     = {117--130},
+       year      = {2002}
+     }
+     ```
 
 3. **Journals / Magazines**:
-   - **Format**: `Author, "Title", Journal Name, Vol, No (if applicable), Pages, Year.`
-   - **Thai Example**: สุจินต์ ภัทรภูวดล, วารีรัตน์ สมประทุม, รัชดาภรณ์ เขียวหวาน, กรุง สีตะธนี และ สิริกุล วะสี, "การคัดเลือกพันธุ์พริกต้านทานต่อโรคไวรัสใบด่างแตงและใบด่างประของพริก", *วารสารวิทยาศาสตร์เกษตร*, ปีที่ 39, ฉบับที่ 3, น. 376-379, 2551.
-   - **English Example**: S. Brin and L. Page, "The Anatomy of a Large-Scale Hypertextual Web Search Engine", *Computer Networks and ISDN Systems*, vol. 30, no. 1-7, pp. 107-117, 1998.
+   - **Fields**: `author`, `title`, `journal`, `volume`, `number`, `pages`, `year`.
+   - **BibTeX Example**:
+     ```bibtex
+     @article{brin1998anatomy,
+       author  = {S. Brin and L. Page},
+       title   = {The Anatomy of a Large-Scale Hypertextual Web Search Engine},
+       journal = {Computer Networks and ISDN Systems},
+       volume  = {30},
+       number  = {1--7},
+       pages   = {107--117},
+       year    = {1998}
+     }
+     ```
 
-4. **Web / Information Resources**:
-   - **Format**: `Author (if available), Title, Year. Source: URL [Accessed: Date].`
-   - **Thai Example**: ศูนย์เทคโนโลยีอิเล็กทรอนิกส์และคอมพิวเตอร์แห่งชาติ, สรรสาร ระบบสืบค้นข้อมูลภาษาไทย, 2560. แหล่งที่มา: https://www.nectec.or.th [เข้าถึงเมื่อ: 1 กรกฎาคม 2561].
-   - **English Example**: Lucene: The Apache Software Foundation, 2016. Available: https://lucene.apache.org [Accessed on: 1 July 2018].
+4. **Web / Online Resources**:
+   - **Fields**: `author` (if available), `title`, `year`, `howpublished`, `note`.
+   - **BibTeX Example**:
+     ```bibtex
+     @misc{lucene2016,
+       author       = {{Apache Software Foundation}},
+       title        = {Lucene},
+       year         = {2016},
+       howpublished = {Available: \url{https://lucene.apache.org}},
+       note         = {[Accessed on: 1 July 2018]}
+     }
+     ```
+
+> [!TIP]
+> **Thai Author Names in BibTeX**:
+> Wrap Thai author names in double curly braces (e.g., `author = {{ชื่อ นามสกุล}}`). This tells BibTeX to treat the entire name as an indivisible string and prevents English initial abbreviation from truncating multi-byte UTF-8 Thai characters.
 
 ---
 
