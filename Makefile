@@ -3,7 +3,7 @@
 # ==============================================================================
 
 MAIN = main
-TEX_FILES = $(shell find . -name "*.tex" -o -name "*.sty")
+SRC_FILES = $(shell find . -name "*.tex" -o -name "*.sty" -o -name "*.bib")
 
 .PHONY: all pdf preview watch clean clean-all
 
@@ -11,8 +11,7 @@ TEX_FILES = $(shell find . -name "*.tex" -o -name "*.sty")
 all: pdf
 
 pdf:
-	xelatex -interaction=nonstopmode $(MAIN).tex
-	xelatex -interaction=nonstopmode $(MAIN).tex
+	latexmk $(MAIN).tex
 
 # Live Preview Continuous Mode (rebuilds automatically on any .tex file save)
 preview watch:
