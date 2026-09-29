@@ -41,6 +41,7 @@ lualatex.fmt
 
 # Build Output & PDF files
 *.pdf
+out/*
 
 # ==============================================================================
 # OS & Editor Files
@@ -49,5 +50,4 @@ lualatex.fmt
 Thumbs.db
 *.swp
 *~
-.vscode/
 .idea/
