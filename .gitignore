@@ -50,4 +50,5 @@ out/*
 Thumbs.db
 *.swp
 *~
+.vscode/
 .idea/
