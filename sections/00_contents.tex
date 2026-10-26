@@ -1,51 +1,35 @@
-% ==============================================================================
-% Page 4-6: Contents, List of Figures, List of Tables
-% ==============================================================================
+% Start of front matter (after the cover/abstract pages)
+\renewcommand{\thepage}{(\arabic{page})}
+\setcounter{page}{3}         % only ONCE, on the first page of this block
 
-% Page 4: Table of Contents
-\newpage
-\renewcommand{\thepage}{(3)}
-
+% --- Contents ---
 \begin{center}
-    {\fontsizeSubtitle\bfseries Contents \par}
+  {\fontsizeSubtitle\bfseries Contents \par}
 \end{center}
 \vspace{0.5em}
-
-\hfill \textbf{Page}
+\noindent\hfill\textbf{Page}\par   % <-- \par ends the paragraph
 \vspace{-0.5em}
+\makeatletter\@starttoc{toc}\makeatother
 
-\makeatletter
-\@starttoc{toc}
-\makeatother
-
-% Page 5: List of Figures
+% --- List of Figures ---
 \newpage
-\renewcommand{\thepage}{(4)}
-
 \begin{center}
-    {\fontsizeSubtitle\bfseries List of Figures \par}
+  {\fontsizeSubtitle\bfseries List of Figures \par}
 \end{center}
 \vspace{0.5em}
-
-\hfill \textbf{Page}
+\noindent\hfill\textbf{Page}\par   % <-- \par ends the paragraph
 \vspace{-0.5em}
+\makeatletter\@starttoc{lof}\makeatother
 
-\makeatletter
-\@starttoc{lof}
-\makeatother
-
-% Page 6: List of Tables
+% --- List of Tables ---
 \newpage
-\renewcommand{\thepage}{(5)}
-
 \begin{center}
-    {\fontsizeSubtitle\bfseries List of Tables \par}
+  {\fontsizeSubtitle\bfseries List of Tables \par}
 \end{center}
 \vspace{0.5em}
-
-\hfill \textbf{Page}
+\noindent\hfill\textbf{Page}\par   % <-- \par ends the paragraph
 \vspace{-0.5em}
+\makeatletter\@starttoc{lot}\makeatother
 
-\makeatletter
-\@starttoc{lot}
-\makeatother
+\newpage
+\pagenumbering{arabic}       % body starts here at 1
