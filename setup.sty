@@ -2,7 +2,7 @@
 \ProvidesPackage{setup}[2026/08/04 SKE Coop Report Template Setup]
 
 % Page Margins (1 inch / 2.54 cm on all sides)
-\RequirePackage[a4paper, top=2.54cm, bottom=2.54cm, left=2.54cm, right=2.54cm, headheight=16pt]{geometry}
+\RequirePackage[a4paper, top=2.54cm, bottom=2.54cm, left=2.54cm, right=2.54cm, headheight=20pt]{geometry}
 
 % Language & Fonts setup for XeLaTeX / LuaLaTeX
 \RequirePackage{fontspec}
@@ -36,6 +36,8 @@
 % Load after hyperref so \cite formatting/compression stays active.
 \RequirePackage{cite}
 
+\RequirePackage{unicode-math}
+
 % Font Configuration: TH Sarabun New TTF files in ./fonts/
 \setmainfont[
   Path = fonts/,
@@ -44,6 +46,11 @@
   ItalicFont = THSarabunNew-Italic,
   BoldItalicFont = THSarabunNew-BoldItalic
 ]{THSarabunNew}
+
+\setmonofont{Courier}[
+  Scale = 0.70
+]
+\setmathfont{Latin Modern Math}[Scale=0.70]
 
 % Base Line Spacing
 \setstretch{1.15}
@@ -61,34 +68,39 @@
 
 % Chapter Header Formatting
 \titleformat{\chapter}[display]
-  {\centering\bfseries\fontsizeSubtitle}
-  {\chaptertitlename\ \thechapter}
-  {0.5em}
-  {\fontsizeSubtitle}
-\titlespacing*{\chapter}{0pt}{-22.5pt}{1.5em}
-
+{\centering\bfseries\fontsizeSubtitle}
+{\chaptertitlename\ \thechapter}
+{0.5em}
+{\fontsizeSubtitle}
+\titlespacing*{\chapter}{0pt}{-\baselineskip}{1.5em}
 % Section Header Formatting
 \titleformat{\section}
-  {\bfseries\fontsizeSection}
-  {\thesection}
-  {1em}
-  {}
+{\bfseries\fontsizeSection}
+{\thesection}
+{1em}
+{}
 \titlespacing*{\section}{0pt}{1em}{0.5em}
 
 \titleformat{\subsection}
-  {\bfseries\fontsizeBody}
-  {\thesubsection}
-  {1em}
-  {}
+{\bfseries\fontsizeBody}
+{\thesubsection}
+{1em}
+{}
 \titlespacing*{\subsection}{0pt}{0.8em}{0.4em}
 
-% Header and Footer Styling
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\rhead{\thepage}
+\rhead{\fontsizeBody\thepage}
 
+% And for chapter opening pages (if you redefined plain):
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \rhead{\fontsizeBody\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
 % Dotted line utility for template fill-ins
 \newcommand{\dottedline}[1]{\dotfill}
 
@@ -101,6 +113,8 @@
 
 % Set bibliography chapter title to References and add entry to Table of Contents
 \renewcommand{\bibname}{References}
-\patchcmd{\thebibliography}{\chapter*{\bibname}}
-  {\cleardoublepage\phantomsection\addcontentsline{toc}{chapter}{\bibname}\chapter*{\bibname}}
-  {}{}
+\patchcmd{\thebibliography}{
+\chapter*{\bibname}}
+{\cleardoublepage\phantomsection\addcontentsline{toc}{chapter}{\bibname}
+\chapter*{\bibname}}
+{}{}
