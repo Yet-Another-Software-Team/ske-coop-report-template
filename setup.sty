@@ -111,8 +111,7 @@
 
 % Set bibliography chapter title to References and add entry to Table of Contents
 \renewcommand{\bibname}{References}
-\patchcmd{\thebibliography}{
-\chapter*{\bibname}}
+\patchcmd{\thebibliography}{\chapter*{\bibname}}
 {\cleardoublepage\phantomsection\addcontentsline{toc}{chapter}{\bibname}
 \chapter*{\bibname}}
 {}{}
