@@ -41,6 +41,7 @@ lualatex.fmt
 
 # Build Output & PDF files
 *.pdf
+out/*
 
 # ==============================================================================
 # OS & Editor Files

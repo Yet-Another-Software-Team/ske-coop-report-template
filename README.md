@@ -95,10 +95,10 @@ make preview
 _or_
 
 ```bash
-latexmk -pvc main.tex
+latexmk -outdir=out -pvc main.tex
 ```
 
-`latexmk -pvc` will watch all `.tex`, `.sty`, `.bib`, and image files. Every time you edit and save any file in your text editor (Vim, Neovim, Emacs, Helix, Kakoune, etc.), it automatically re-compiles `main.pdf` and executes `bibtex` whenever citations change.
+`latexmk -outdir=out -pvc` will watch all `.tex`, `.sty`, `.bib`, and image files. Every time you edit and save any file in your text editor (Vim, Neovim, Emacs, Helix, Kakoune, etc.), it automatically re-compiles `out/main.pdf` and executes `bibtex` whenever citations change.
 
 #### Recommended Auto-Reloading PDF Viewers for Linux:
 
@@ -117,7 +117,7 @@ latexmk -pvc main.tex
 make pdf
 ```
 
-_(Runs `latexmk main.tex`, which automatically handles XeLaTeX and BibTeX passes)._
+_(`Makefile` runs `latexmk -outdir=out main.tex`, which automatically handles XeLaTeX and BibTeX passes)._
 
 ---
 
@@ -125,5 +125,5 @@ _(Runs `latexmk main.tex`, which automatically handles XeLaTeX and BibTeX passes
 
 ```bash
 make clean      # Clean auxiliary build files (.aux, .bbl, .blg, .log, .toc, etc.)
-make clean-all  # Clean auxiliary files and generated main.pdf
+make clean-all  # Clean auxiliary files and generated PDF in out/
 ```
